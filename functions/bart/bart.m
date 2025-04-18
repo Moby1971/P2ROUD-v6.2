@@ -91,10 +91,6 @@ if ispc
         end
     end
 
-    if ERR~=0
-        app.TextMessage('command exited with an error');
-    end
-
     % Delete the temporary folder
     try
         delete(strcat(name,filesep,'*'));
@@ -196,10 +192,6 @@ if ismac
         if (exist(strcat(out{i}, '.hdr'),'file'))
             delete(strcat(out{i}, '.hdr'));
         end
-    end
-
-    if ERR~=0
-        app.TextMessage('command exited with an error');
     end
 
 end
