@@ -126,7 +126,7 @@ end
 pnts = [Xp;Yp;Zp];
 pnts = reshape(pnts,[3*length(Xp),1]);
 
-filename = 'lut_32000ph.txt';
+filename = '.\output\lut_32000ph.txt';
 fileID = fopen(filename,'w');
 
 maxpoints = 32000;

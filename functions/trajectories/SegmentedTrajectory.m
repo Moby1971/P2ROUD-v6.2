@@ -1,6 +1,6 @@
 %% ---------------------------
 %
-%
+% Gustav Strijkers
 %
 %
 
@@ -93,7 +93,7 @@ end
 
 
 
-filename = 'per_dimy192_segm16_lines12.txt';
+filename = '.\output\per_dimy192_segm16_lines12.txt';
 fileID = fopen(filename,'w');
 
 for i = 1:length(trajs)
