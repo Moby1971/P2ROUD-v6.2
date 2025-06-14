@@ -16,13 +16,13 @@ clc;
 %% User input
 
 % Size of k-space
-sizeOfKspace = [128, 128];
+sizeOfKspace = [256, 256];
 
 % Size of center-filled region;
-sizeOfCenter = [16, 16];
+sizeOfCenter = [32, 32];
 
 % Desired acceleration factor (1 or higher)
-xFactor = 5;
+xFactor = 8;
 
 % Elliptical shutter (true/false)
 eShutter = true;
@@ -35,7 +35,7 @@ outputFolder = "./output/";
 
 % Show the mask (true/false)
 showMask = true;
-speed = 1000;
+speed = 10000;
 
 
 
@@ -64,7 +64,7 @@ if showMask
     clim([0 1]);
     axis image off;
     title({strcat("Effective acceleration factor = ", num2str(AF,4)), ...
-        strcat("Number of samples = ",num2str(NE))});
+        strcat("Number of samples = ",num2str(NE))},'FontSize', 20);
 
     % Convert (ky, kz) sample coordinates to matrix indices
     ky = samples(:,1) + floor(sizeOfKspace(1)/2) + 1;
@@ -82,22 +82,22 @@ end
 %% Export the k-space points to LUT file
 
 if eShutter
-    shutter = 'e';
+    shutter = 'E';
 else
-    shutter = 's';
+    shutter = 'S';
 end
 
-filename = strcat(outputFolder,"eLUT_",num2str(NE),"_",num2str(sizeOfKspace(1)),"_",num2str(sizeOfKspace(2)),"_",shutter,".txt");
+filename = strcat(outputFolder,"NonRegLUT_R",num2str(AF,2),"_M",num2str(sizeOfKspace(1)),"x",num2str(sizeOfKspace(2)),shutter,".txt");
 fileID = fopen(filename,'w');
 
 [l16, h16] = split32to16(NE);
 
-fprintf(fileID,[num2str(l16),',\n']);
-fprintf(fileID,[num2str(h16),',\n']);
+fprintf(fileID,[num2str(l16),'\n']);
+fprintf(fileID,[num2str(h16),'\n']);
 
 for cnt = 1:NE
-     fprintf(fileID,[num2str(samples(cnt,1)),',\n']);
-     fprintf(fileID,[num2str(samples(cnt,2)),',\n']);
+     fprintf(fileID,[num2str(samples(cnt,1)),'\n']);
+     fprintf(fileID,[num2str(samples(cnt,2)),'\n']);
 end
  
 fclose(fileID);
