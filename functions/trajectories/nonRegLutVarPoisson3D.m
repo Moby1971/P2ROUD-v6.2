@@ -1,4 +1,4 @@
-%% 3D undersampled k-space maker for pe1_order = 5 extended non-regular LUT
+%% 3D random undersampled k-space maker for pe1_order = 5 extended non-regular LUT
 %
 % Gustav Strijkers
 % g.j.strijkers@amsterdamumc.nl
