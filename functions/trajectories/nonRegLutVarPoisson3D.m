@@ -18,7 +18,7 @@ clc;
 % Size of k-space
 sizeOfKspace = [256, 256];
 
-% Size of center-filled region;
+% Size of center-filled region
 sizeOfCenter = [32, 32];
 
 % Desired acceleration factor (1 or higher)
