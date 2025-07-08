@@ -1,6 +1,14 @@
 %% ---------------------------
 %
+% Zig-zag trajectory with random k-space filling and fully sampled k-space center
+% Fill 16s repetitions of a 192 matrix
+% K-space center = 12 fully sampled lines
+% 
+%
 % Gustav Strijkers
+% July 2025
+%
+%
 %
 %
 
