@@ -112,7 +112,7 @@ end
 
 %% Export LUT (kz = 0 always)
 
-filename = strcat(outputFolder,"NonReg2DLUT_R",num2str(AF,2),"_",num2str(sizeOfKspace(2)),".txt");
+filename = strcat(outputFolder,"nrLUT_2D_R",num2str(AF,2),"_",num2str(sizeOfKspace(2)),".txt");
 fileID = fopen(filename,'w');
 
 [l16, h16] = split32to16(NE);

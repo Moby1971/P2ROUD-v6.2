@@ -87,7 +87,7 @@ else
     shutter = 'S';
 end
 
-filename = strcat(outputFolder,"NonRegLUT_R",num2str(AF,2),"_M",num2str(sizeOfKspace(1)),"x",num2str(sizeOfKspace(2)),shutter,".txt");
+filename = strcat(outputFolder,"nrLUT_3D_R",num2str(AF,2),"_M",num2str(sizeOfKspace(1)),"x",num2str(sizeOfKspace(2)),shutter,".txt");
 fileID = fopen(filename,'w');
 
 [l16, h16] = split32to16(NE);

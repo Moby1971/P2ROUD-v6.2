@@ -219,7 +219,7 @@ else
     shutter = 'S';
 end
 
-filename = strcat(outputFolder,"NRLUT_MPRAGE_R",num2str(AF,2),"_S",num2str(mprageShotLength),"_M",num2str(sizeOfKspace(1)),"x",num2str(sizeOfKspace(2)),shutter,".txt");
+filename = strcat(outputFolder,"nrLUT_MPRAGE_R",num2str(AF,2),"_S",num2str(mprageShotLength),"_M",num2str(sizeOfKspace(1)),"x",num2str(sizeOfKspace(2)),shutter,".txt");
 fileID = fopen(filename,'w');
 
 [l16, h16] = split32to16(NE);
