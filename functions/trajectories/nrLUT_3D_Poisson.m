@@ -16,13 +16,13 @@ clc;
 %% User input
 
 % Size of k-space
-sizeOfKspace = [256, 256];
+sizeOfKspace = [192, 192];
 
 % Size of center-filled region
 sizeOfCenter = [32, 32];
 
 % Desired acceleration factor (1 or higher)
-xFactor = 8;
+xFactor = 3;
 
 % Elliptical shutter (true/false)
 eShutter = true;
