@@ -18,10 +18,10 @@ close all;
 
 %% Initialization
 
-dimy = 64;                      % k-space y dimension (no_views)
+dimy = 96;                      % k-space y dimension (no_views)
 dimz = 64;                      % k-space z dimension (no_views_2)
 order = 1;                      % 0 = one direction; 1 = back and forth,
-angleNr = 3;                    % golden angle number (see list below)
+angleNr = 7;                    % golden angle number (see list below)
 display = true;                 % show result true / false
 outputdir = './output/';        % output directory
 exportList = true;              % export true / false
