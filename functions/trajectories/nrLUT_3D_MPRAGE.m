@@ -14,12 +14,12 @@ clc;
 
 %% User input
 
-sizeOfKspace = [128, 128];              % Size of k-space
-sizeOfCenter = [16, 16];                % Size of center-filled region
+sizeOfKspace = [128, 128];                % Size of k-space
+sizeOfCenter = [32, 32];                % Size of center-filled region
 xFactor = 4;                            % Desired acceleration factor (1 or higher)
 variableDensity = 0.8;                  % Variable density (0 = uniform, >0 = more samples in the center, typical value = 0.8
 eShutter = true;                        % Elliptical shutter (true/false)
-mprageShotLength = 64;                  % MPRAGE shot length
+mprageShotLength = 32;                  % MPRAGE shot length
 showMask = true;                        % Show k-space filling
 movieDelay = 0.0001;                    % Waiting time between drawing of k-space points (s)
 outputFolder = "./output/";             % Output folder

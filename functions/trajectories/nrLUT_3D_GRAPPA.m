@@ -14,10 +14,10 @@ clc;
 
 %% User input
 
-sizeOfKspace = [128, 128];              % ky x kz
+sizeOfKspace = [96, 96];              % ky x kz
 ACSsize = [25, 25];                     % Fully sampled ACS region [ky, kz]
-Ry = 2;                                 % Undersampling factor in ky
-Rz = 2;                                 % Undersampling factor in kz
+Ry = 3;                                 % Undersampling factor in ky
+Rz = 3;                                 % Undersampling factor in kz
 outputFolder = "./output/";             % Output folder
 showKspace = true;                      % Visualize mask (true/false)
 
